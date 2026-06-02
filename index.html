@@ -1,30 +1,325 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yixin Chen | Academic CV</title>
+
+  <style>
+    :root {
+      --main: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --line: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--main);
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    .profile {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 42px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .header {
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 12px;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+      color: #111827;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin: 0;
+      color: #111827;
+    }
+
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .profile {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .item-header {
+        display: block;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
-  <h1>Yixin Chen</h1>
-  <p>M.Sc. in Governance of Digitalisation | Information Systems | Human-AI Interaction</p>
+  <main class="container">
+    <div class="profile">
 
-  <h2>Research Interests</h2>
-  <p>Human-AI collaboration, AI in education, usability evaluation, digital services, and information systems.</p>
+```
+  <header class="header">
+    <h1>Yixin Chen</h1>
+    <div class="subtitle">
+      M.Sc. in Governance of Digitalisation | Information Systems | Human–AI Interaction
+    </div>
+    <div class="contact">
+      Wenzhou, China |
+      <a href="mailto:yixinchen1029@gmail.com">yixinchen1029@gmail.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Google Scholar</a>
+      <a href="#">ORCID</a>
+    </div>
+  </header>
 
-  <h2>Education</h2>
-  <p><strong>Åbo Akademi University</strong>, M.Sc. Business and Economics / Governance of Digitalisation, 2023–2025</p>
+  <section>
+    <h2>Research Interests</h2>
+    <p>
+      Human–AI collaboration, AI in education, usability evaluation, digital services,
+      information systems, and human–computer interaction.
+    </p>
+  </section>
 
-  <h2>Research Experience</h2>
-  <p><strong>Project Work, AI Agent Functionality Testing</strong>, Aalto University, 2026</p>
-  <ul>
-    <li>Tested whether ChatGPT agents could maintain high-mechanical and high-social interaction styles.</li>
-    <li>Designed structured prompts and evaluated style consistency, emotional-response handling, and output-control compliance.</li>
-  </ul>
+  <section>
+    <h2>Education</h2>
 
-  <h2>Publications</h2>
-  <p>Chen, Y. (2026). Usability Evaluation of a Mobile Language-Learning Service: A Triangulated Mixed-Method. Under Review.</p>
+    <div class="item">
+      <div class="item-header">
+        <h3>Åbo Akademi University</h3>
+        <span class="date">Aug 2023 – Jun 2025</span>
+      </div>
+      <div class="meta">M.Sc. in Business and Economics / Governance of Digitalisation | Finland | GPA: 4.3/5</div>
+      <ul>
+        <li>Thesis: <em>Eye-Tracking Insights into Usability Challenges of Mobile-Assisted Language Learning</em> | Grade: 5/5</li>
+        <li>Relevant modules: Analytics, Data Management, Business Intelligence, Business Analytics</li>
+      </ul>
+    </div>
 
-  <h2>Contact</h2>
-  <p>Email: your email | LinkedIn: your link | Google Scholar: your link</p>
+    <div class="item">
+      <div class="item-header">
+        <h3>University of Turku</h3>
+        <span class="date">Inter-institutional Studies</span>
+      </div>
+      <div class="meta">Information Systems | Finland</div>
+      <ul>
+        <li>Relevant modules: Management of IS Projects, Digital Economy and Business Models, IT Governance, IT Service Management, Information System Security</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <h3>Laurea University of Applied Sciences</h3>
+        <span class="date">Aug 2019 – May 2023</span>
+      </div>
+      <div class="meta">BBA in Economics, Administration and Marketing / Service Business Management | Finland</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Research Experience</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <h3>Project Work, AI Agent Functionality Testing</h3>
+        <span class="date">May 2026</span>
+      </div>
+      <div class="meta">Aalto University, Department of Information and Service Management | Online</div>
+      <ul>
+        <li><strong>Questions:</strong> Tested whether ChatGPT agents could be shaped into high-mechanical and high-social intelligence interaction styles, maintain these styles across conversations, and follow prompt-based output-control rules.</li>
+        <li><strong>Methods:</strong> Conducted an independent online functionality test in a clean ChatGPT environment; designed and refined structured prompts; compared responses across same-topic multi-turn conversations.</li>
+        <li><strong>Results:</strong> Found that clear agent differentiation and reliable output control are achievable, but require strict and explicit prompt rules.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="item">
+      <p>
+        Chen, Y. (2026). <em>Usability Evaluation of a Mobile Language-Learning Service:
+        A Triangulated Mixed-Method</em>. 25th IFIP Conference on e-Business,
+        e-Services, and e-Society (I3E 2026). Under Review.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Honors and Awards</h2>
+    <ul>
+      <li>Third Prize Paper Award, Doctoral Consortium, 25th Wuhan International Conference on E-Business (WHICEB 2026).</li>
+      <li>Kurt Ertman’s Fund 2025, Award for the Best Thesis.</li>
+      <li>Scholarship 2023–2025, Åbo Akademi University, Department of Business and Economics.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Academic Activities</h2>
+    <ul>
+      <li>CNAIS-UNNC Workshop, University of Nottingham Ningbo China, July 2026.</li>
+      <li>25th Wuhan International Conference on E-Business (WHICEB 2026), AIS Affiliated Conference.</li>
+      <li>Conducted in-depth discussions with 10 renowned professors and developed research ideas on Human–AI Collaboration in Education and Research.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Industry Experience</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <h3>Finance Assistant</h3>
+        <span class="date">Dec 2025 – Apr 2026</span>
+      </div>
+      <div class="meta">Spartao Oy | Espoo, Finland</div>
+      <ul>
+        <li>Processed, cleaned, and organized financial and sales-related data for reporting and analysis.</li>
+        <li>Conducted data analysis using Excel, BI tools, and internal platforms to monitor key business metrics.</li>
+        <li>Prepared reports and maintained system-based records to support cross-functional decision-making.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <h3>Part-time English Teacher / Founder</h3>
+        <span class="date">2022 – Present</span>
+      </div>
+      <div class="meta">TechLingo TMI | Online</div>
+      <ul>
+        <li>Teach English and writing skills to students, with attention to responsible use of smart tools and critical thinking development.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="tag-list">
+      <span class="tag">Python</span>
+      <span class="tag">Generative AI</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Excel</span>
+      <span class="tag">BI Tools</span>
+      <span class="tag">Zotero</span>
+      <span class="tag">English</span>
+      <span class="tag">Chinese</span>
+    </div>
+  </section>
+
+</div>
+```
+
+  </main>
 </body>
 </html>
