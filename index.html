@@ -7,212 +7,62 @@
   <title>Yixin Chen | Academic Homepage</title>
 
   <style>
-    :root {
-      --text: #2f3437;
-      --muted: #6b7280;
-      --link: #1f5faa;
-      --line: #e5e7eb;
-      --bg: #ffffff;
-      --soft: #f8fafc;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.65;
-      font-size: 15px;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .topnav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--line);
-      text-align: center;
-      padding: 13px 20px;
-    }
-
-    .topnav a {
-      color: var(--muted);
-      margin: 0 15px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .topnav a:hover {
-      color: var(--text);
-      text-decoration: none;
-    }
-
     .page {
-      max-width: 1120px;
-      margin: 42px auto;
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 56px;
-      padding: 0 28px;
-    }
+max-width: 1120px;
+margin: 42px auto;
+display: flex;
+align-items: flex-start;
+gap: 56px;
+padding: 0 28px;
+}
 
-    .sidebar {
-      text-align: left;
-      position: sticky;
-      top: 90px;
-      align-self: start;
-    }
+.sidebar {
+width: 260px;
+min-width: 260px;
+text-align: left;
+position: sticky;
+top: 90px;
+align-self: flex-start;
+}
 
-    .photo {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 6px solid #f3f4f6;
-      box-shadow: 0 0 0 1px var(--line);
-      display: block;
-      margin-bottom: 18px;
-    }
+main {
+flex: 1;
+max-width: 780px;
+}
 
-    .name {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
+.photo {
+width: 170px;
+height: 170px;
+border-radius: 50%;
+object-fit: cover;
+border: 6px solid #f3f4f6;
+box-shadow: 0 0 0 1px #e5e7eb;
+display: block;
+margin-bottom: 18px;
+}
 
-    .role {
-      color: var(--text);
-      margin-bottom: 2px;
-    }
+@media (max-width: 800px) {
+.page {
+display: block;
+margin-top: 28px;
+}
 
-    .field {
-      color: var(--text);
-      margin-bottom: 22px;
-    }
+.sidebar {
+width: 100%;
+min-width: 0;
+position: static;
+text-align: center;
+margin-bottom: 32px;
+}
 
-    .side-link {
-      display: block;
-      margin: 13px 0;
-      color: var(--text);
-      font-weight: 500;
-    }
+.photo {
+margin: 0 auto 18px;
+}
 
-    .side-link span {
-      display: inline-block;
-      width: 22px;
-    }
-
-    main {
-      max-width: 780px;
-    }
-
-    section {
-      margin-bottom: 36px;
-      scroll-margin-top: 90px;
-    }
-
-    h1 {
-      font-size: 21px;
-      margin: 0 0 12px;
-    }
-
-    h2 {
-      font-size: 25px;
-      margin: 0 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--line);
-      color: var(--text);
-    }
-
-    h3 {
-      font-size: 17px;
-      margin: 18px 0 6px;
-    }
-
-    p {
-      margin: 0 0 12px;
-    }
-
-    ul {
-      margin-top: 8px;
-      padding-left: 24px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .paper {
-      margin-bottom: 14px;
-    }
-
-    .item {
-      margin-bottom: 18px;
-    }
-
-    .item-title {
-      font-weight: 700;
-    }
-
-    .item-meta {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    .highlight {
-      font-weight: 700;
-    }
-
-    .tagline {
-      background: var(--soft);
-      border-left: 4px solid var(--link);
-      padding: 12px 16px;
-      margin: 18px 0;
-    }
-
-    @media (max-width: 800px) {
-      .topnav {
-        text-align: left;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
-
-      .page {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        margin-top: 28px;
-      }
-
-      .sidebar {
-        position: static;
-        text-align: center;
-      }
-
-      .photo {
-        margin: 0 auto 18px;
-      }
-
-      main {
-        max-width: 100%;
-      }
-    }
+main {
+max-width: 100%;
+}
+}
   </style>
 
 </head>
@@ -241,10 +91,7 @@
   <div class="field">Information Systems | Human–AI Interaction</div>
 
   <a class="side-link" href="mailto:yixinchen1029@gmail.com"><span>✉️</span>Email</a>
-  <a class="side-link" href="#"><span>🔗</span>LinkedIn</a>
-  <a class="side-link" href="#"><span>🎓</span>Google Scholar</a>
-  <a class="side-link" href="#"><span>🆔</span>ORCID</a>
-  <a class="side-link" href="#"><span>💻</span>GitHub</a>
+
 </aside>
 
 <main>
