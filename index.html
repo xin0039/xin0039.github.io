@@ -2,18 +2,18 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yixin Chen | Academic CV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yixin Chen | Academic Homepage</title>
 
   <style>
     :root {
-      --main: #1f2937;
+      --text: #2f3437;
       --muted: #6b7280;
-      --accent: #2563eb;
-      --bg: #f8fafc;
-      --card: #ffffff;
+      --link: #1f5faa;
       --line: #e5e7eb;
+      --bg: #ffffff;
+      --soft: #f8fafc;
     }
 
     * {
@@ -22,145 +22,195 @@
 
     body {
       margin: 0;
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
       background: var(--bg);
-      color: var(--main);
       line-height: 1.65;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 40px auto;
-      padding: 0 24px;
-    }
-
-    .profile {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 42px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-    }
-
-    .header {
-      border-bottom: 2px solid var(--line);
-      padding-bottom: 24px;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin: 0 0 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .subtitle {
-      font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .contact {
       font-size: 15px;
-      color: var(--muted);
     }
 
-    .contact a {
-      color: var(--accent);
+    a {
+      color: var(--link);
       text-decoration: none;
-      margin-right: 12px;
+      font-weight: 600;
     }
 
-    .contact a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+      padding: 13px 20px;
+    }
+
+    .topnav a {
+      color: var(--muted);
+      margin: 0 15px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .topnav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 42px auto;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      padding: 0 28px;
+    }
+
+    .sidebar {
+      text-align: left;
+      position: sticky;
+      top: 90px;
+      align-self: start;
+    }
+
+    .photo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #f3f4f6;
+      box-shadow: 0 0 0 1px var(--line);
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .role {
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .field {
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+
+    .side-link {
+      display: block;
+      margin: 13px 0;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .side-link span {
+      display: inline-block;
+      width: 22px;
+    }
+
+    main {
+      max-width: 780px;
+    }
+
     section {
-      margin-bottom: 32px;
+      margin-bottom: 36px;
+      scroll-margin-top: 90px;
+    }
+
+    h1 {
+      font-size: 21px;
+      margin: 0 0 12px;
     }
 
     h2 {
-      font-size: 22px;
-      margin-bottom: 14px;
-      padding-bottom: 6px;
+      font-size: 25px;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--line);
-      color: #111827;
+      color: var(--text);
     }
 
     h3 {
       font-size: 17px;
-      margin: 0;
-      color: #111827;
+      margin: 18px 0 6px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .paper {
+      margin-bottom: 14px;
     }
 
     .item {
       margin-bottom: 18px;
     }
 
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 4px;
+    .item-title {
+      font-weight: 700;
     }
 
-    .date {
+    .item-meta {
       color: var(--muted);
       font-size: 14px;
-      white-space: nowrap;
+      margin-bottom: 5px;
     }
 
-    .meta {
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 6px;
+    .highlight {
+      font-weight: 700;
     }
 
-    ul {
-      margin: 8px 0 0 20px;
-      padding: 0;
+    .tagline {
+      background: var(--soft);
+      border-left: 4px solid var(--link);
+      padding: 12px 16px;
+      margin: 18px 0;
     }
 
-    li {
-      margin-bottom: 6px;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .tag {
-      background: #eff6ff;
-      color: #1d4ed8;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 14px;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    @media (max-width: 700px) {
-      .profile {
-        padding: 28px;
+    @media (max-width: 800px) {
+      .topnav {
+        text-align: left;
+        overflow-x: auto;
+        white-space: nowrap;
       }
 
-      h1 {
-        font-size: 34px;
+      .page {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 28px;
       }
 
-      .subtitle {
-        font-size: 16px;
+      .sidebar {
+        position: static;
+        text-align: center;
       }
 
-      .item-header {
-        display: block;
+      .photo {
+        margin: 0 auto 18px;
+      }
+
+      main {
+        max-width: 100%;
       }
     }
   </style>
@@ -168,122 +218,167 @@
 </head>
 
 <body>
-  <main class="container">
-    <div class="profile">
+
+  <nav class="topnav">
+    <a href="#home">Homepage</a>
+    <a href="#about">About Me</a>
+    <a href="#interests">Research Interests</a>
+    <a href="#publications">Publications</a>
+    <a href="#awards">Honors and Awards</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Academic Experience</a>
+    <a href="#industry">Industry Experience</a>
+  </nav>
+
+  <div class="page">
 
 ```
-  <header class="header">
-    <h1>Yixin Chen</h1>
-    <div class="subtitle">
-      M.Sc. in Governance of Digitalisation | Information Systems | Human–AI Interaction
-    </div>
-    <div class="contact">
-      Wenzhou, China |
-      <a href="mailto:yixinchen1029@gmail.com">yixinchen1029@gmail.com</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Google Scholar</a>
-      <a href="#">ORCID</a>
-    </div>
-  </header>
+<aside class="sidebar">
+  <img src="profile.jpg" alt="Yixin Chen profile photo" class="photo">
 
-  <section>
-    <h2>Research Interests</h2>
+  <div class="name">Yixin Chen</div>
+  <div class="role">M.Sc. in Governance of Digitalisation</div>
+  <div class="field">Information Systems | Human–AI Interaction</div>
+
+  <a class="side-link" href="mailto:yixinchen1029@gmail.com"><span>✉️</span>Email</a>
+  <a class="side-link" href="#"><span>🔗</span>LinkedIn</a>
+  <a class="side-link" href="#"><span>🎓</span>Google Scholar</a>
+  <a class="side-link" href="#"><span>🆔</span>ORCID</a>
+  <a class="side-link" href="#"><span>💻</span>GitHub</a>
+</aside>
+
+<main>
+
+  <section id="home">
+    <h1>Welcome!</h1>
     <p>
-      Human–AI collaboration, AI in education, usability evaluation, digital services,
-      information systems, and human–computer interaction.
+      I am a master's graduate in Business and Economics / Governance of Digitalisation from Åbo Akademi University.
+      My academic interests lie at the intersection of information systems, human–AI interaction, digital services,
+      and AI-supported education.
+    </p>
+    <p>
+      My recent work focuses on usability evaluation of mobile language-learning services and prompt-based AI agent
+      functionality testing. I am particularly interested in how users interact with intelligent digital services,
+      and how AI systems can support learning, decision-making, and human–AI collaboration.
+    </p>
+    <p>
+      You can find my academic CV, research experience, publications, and selected academic activities on this page.
     </p>
   </section>
 
-  <section>
-    <h2>Education</h2>
+  <section id="about">
+    <h2>💡 About Me</h2>
+    <p>
+      My background combines digital business, information systems, teaching experience, and applied research.
+      I have experience in online English teaching, usability testing, eye-tracking-based user evaluation,
+      and business data reporting.
+    </p>
+    <p>
+      I am currently developing research ideas around AI in education, Human–AI collaboration,
+      AI literacy, Socratic questioning, and responsible use of generative AI in learning contexts.
+    </p>
+  </section>
+
+  <section id="interests">
+    <h2>💡 Research Interests</h2>
+    <ul>
+      <li><span class="highlight">Substantive:</span> Human–AI Collaboration, AI in Education, Digital Services, Mobile Language Learning</li>
+      <li><span class="highlight">Methodological:</span> Usability Evaluation, Eye Tracking, Mixed Methods, Experimental Design</li>
+      <li><span class="highlight">Emerging Interests:</span> AI Literacy, Socratic Questioning, Prompt-Based AI Agent Behaviour, Critical Thinking in AI-Supported Learning</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>📝 Publications</h2>
+
+    <div class="paper">
+      <strong>Chen, Y.</strong> (2026).
+      <em>Usability Evaluation of a Mobile Language-Learning Service: A Triangulated Mixed-Method.</em>
+      25th IFIP Conference on e-Business, e-Services, and e-Society (I3E 2026). Under Review.
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>🏅 Honors and Awards</h2>
+    <ul>
+      <li>
+        Winner of the Third Prize Paper Award,
+        <em>Eye-Tracking Insights into Usability Challenges of Mobile-Assisted Language Learning</em>,
+        Doctoral Consortium, 25th Wuhan International Conference on E-Business (WHICEB 2026).
+      </li>
+      <li>
+        Kurt Ertman’s Fund 2025. Award for the Best Thesis,
+        <em>Eye-Tracking Insights into Usability Challenges of Mobile-Assisted Language Learning</em>.
+      </li>
+      <li>
+        Scholarship 2023–2025, Åbo Akademi University, Department of Business and Economics.
+      </li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>🎓 Education</h2>
 
     <div class="item">
-      <div class="item-header">
-        <h3>Åbo Akademi University</h3>
-        <span class="date">Aug 2023 – Jun 2025</span>
-      </div>
-      <div class="meta">M.Sc. in Business and Economics / Governance of Digitalisation | Finland | GPA: 4.3/5</div>
+      <div class="item-title">Åbo Akademi University | Finland</div>
+      <div class="item-meta">M.Sc. in Business and Economics / Governance of Digitalisation | Aug 2023 – Jun 2025</div>
       <ul>
+        <li>GPA: 4.3/5</li>
         <li>Thesis: <em>Eye-Tracking Insights into Usability Challenges of Mobile-Assisted Language Learning</em> | Grade: 5/5</li>
-        <li>Relevant modules: Analytics, Data Management, Business Intelligence, Business Analytics</li>
+        <li>Relevant modules: Programming for Analytics, Data Management, Business Intelligence, Business Analytics</li>
       </ul>
     </div>
 
     <div class="item">
-      <div class="item-header">
-        <h3>University of Turku</h3>
-        <span class="date">Inter-institutional Studies</span>
-      </div>
-      <div class="meta">Information Systems | Finland</div>
+      <div class="item-title">University of Turku | Finland</div>
+      <div class="item-meta">Inter-institutional Studies in Information Systems</div>
       <ul>
         <li>Relevant modules: Management of IS Projects, Digital Economy and Business Models, IT Governance, IT Service Management, Information System Security</li>
       </ul>
     </div>
 
     <div class="item">
-      <div class="item-header">
-        <h3>Laurea University of Applied Sciences</h3>
-        <span class="date">Aug 2019 – May 2023</span>
-      </div>
-      <div class="meta">BBA in Economics, Administration and Marketing / Service Business Management | Finland</div>
+      <div class="item-title">Laurea University of Applied Sciences | Finland</div>
+      <div class="item-meta">BBA in Economics, Administration and Marketing / Service Business Management | Aug 2019 – May 2023</div>
     </div>
   </section>
 
-  <section>
-    <h2>Research Experience</h2>
+  <section id="experience">
+    <h2>🔬 Academic Experience</h2>
 
     <div class="item">
-      <div class="item-header">
-        <h3>Project Work, AI Agent Functionality Testing</h3>
-        <span class="date">May 2026</span>
-      </div>
-      <div class="meta">Aalto University, Department of Information and Service Management | Online</div>
+      <div class="item-title">Project Work, AI Agent Functionality Testing</div>
+      <div class="item-meta">Aalto University, Department of Information and Service Management | Online | May 2026</div>
       <ul>
         <li><strong>Questions:</strong> Tested whether ChatGPT agents could be shaped into high-mechanical and high-social intelligence interaction styles, maintain these styles across conversations, and follow prompt-based output-control rules.</li>
         <li><strong>Methods:</strong> Conducted an independent online functionality test in a clean ChatGPT environment; designed and refined structured prompts; compared responses across same-topic multi-turn conversations.</li>
         <li><strong>Results:</strong> Found that clear agent differentiation and reliable output control are achievable, but require strict and explicit prompt rules.</li>
       </ul>
     </div>
-  </section>
 
-  <section>
-    <h2>Publications</h2>
     <div class="item">
-      <p>
-        Chen, Y. (2026). <em>Usability Evaluation of a Mobile Language-Learning Service:
-        A Triangulated Mixed-Method</em>. 25th IFIP Conference on e-Business,
-        e-Services, and e-Society (I3E 2026). Under Review.
-      </p>
+      <div class="item-title">Academic Activities</div>
+      <ul>
+        <li>
+          <em>Usability Evaluation of a Mobile Language-Learning Service: A Triangulated Mixed-Method</em>,
+          CNAIS-UNNC Workshop, University of Nottingham Ningbo China, July 2026.
+        </li>
+        <li>
+          The 25th Wuhan International Conference on E-Business (WHICEB 2026), AIS Affiliated Conference.
+        </li>
+        <li>
+          Conducted in-depth discussions with 10 renowned professors and developed research ideas on Human–AI Collaboration in Education and Research.
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section>
-    <h2>Honors and Awards</h2>
-    <ul>
-      <li>Third Prize Paper Award, Doctoral Consortium, 25th Wuhan International Conference on E-Business (WHICEB 2026).</li>
-      <li>Kurt Ertman’s Fund 2025, Award for the Best Thesis.</li>
-      <li>Scholarship 2023–2025, Åbo Akademi University, Department of Business and Economics.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Academic Activities</h2>
-    <ul>
-      <li>CNAIS-UNNC Workshop, University of Nottingham Ningbo China, July 2026.</li>
-      <li>25th Wuhan International Conference on E-Business (WHICEB 2026), AIS Affiliated Conference.</li>
-      <li>Conducted in-depth discussions with 10 renowned professors and developed research ideas on Human–AI Collaboration in Education and Research.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Industry Experience</h2>
+  <section id="industry">
+    <h2>💼 Industry Experience</h2>
 
     <div class="item">
-      <div class="item-header">
-        <h3>Finance Assistant</h3>
-        <span class="date">Dec 2025 – Apr 2026</span>
-      </div>
-      <div class="meta">Spartao Oy | Espoo, Finland</div>
+      <div class="item-title">Finance Assistant</div>
+      <div class="item-meta">Spartao Oy | Espoo, Finland | Dec 2025 – Apr 2026</div>
       <ul>
         <li>Processed, cleaned, and organized financial and sales-related data for reporting and analysis.</li>
         <li>Conducted data analysis using Excel, BI tools, and internal platforms to monitor key business metrics.</li>
@@ -292,34 +387,18 @@
     </div>
 
     <div class="item">
-      <div class="item-header">
-        <h3>Part-time English Teacher / Founder</h3>
-        <span class="date">2022 – Present</span>
-      </div>
-      <div class="meta">TechLingo TMI | Online</div>
+      <div class="item-title">Part-time English Teacher / Founder</div>
+      <div class="item-meta">TechLingo TMI | Online | 2022 – Present</div>
       <ul>
-        <li>Teach English and writing skills to students, with attention to responsible use of smart tools and critical thinking development.</li>
+        <li>Teach English and writing skills, with attention to responsible use of smart tools and critical thinking development.</li>
       </ul>
     </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="tag-list">
-      <span class="tag">Python</span>
-      <span class="tag">Generative AI</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">Excel</span>
-      <span class="tag">BI Tools</span>
-      <span class="tag">Zotero</span>
-      <span class="tag">English</span>
-      <span class="tag">Chinese</span>
-    </div>
-  </section>
-
-</div>
+</main>
 ```
 
-  </main>
+  </div>
+
 </body>
 </html>
