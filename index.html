@@ -258,6 +258,88 @@
       font-size: 14px;
       font-weight: 600;
     }
+    /* Soft entrance animation */
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.sidebar {
+animation: fadeUp 0.7s ease-out both;
+}
+
+main section {
+animation: fadeUp 0.75s ease-out both;
+}
+
+main section:nth-of-type(1) {
+animation-delay: 0.05s;
+}
+
+main section:nth-of-type(2) {
+animation-delay: 0.12s;
+}
+
+main section:nth-of-type(3) {
+animation-delay: 0.18s;
+}
+
+/* Welcome highlight effect */
+.highlight-box {
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.highlight-box:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+/* Photo hover effect */
+.photo {
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo:hover {
+transform: translateY(-3px);
+box-shadow: 0 0 0 1px var(--line), 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+/* Navigation hover refinement */
+.topnav a {
+position: relative;
+}
+
+.topnav a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 0;
+height: 2px;
+background: var(--link);
+transition: width 0.25s ease;
+}
+
+.topnav a:hover::after {
+width: 100%;
+}
+
+/* Respect reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+
+* {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+  }
+  }
+
 
     @media (max-width: 900px) {
       .topnav {
